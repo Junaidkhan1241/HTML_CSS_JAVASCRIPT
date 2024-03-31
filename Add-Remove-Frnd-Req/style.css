@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #fff; */
+
+}
+#container{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    background-color: #fff;
+    width: 285px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    overflow: hidden;
+
+}
+#container img{
+    width: 240px;
+    height: 200px;
+    /* aspect-ratio: 2/2; */
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 20px;
+    
+}
+#container h1{
+    margin-top: 10px;
+    text-align: center;
+}
+#container h3{
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: black;
+}
+#btn-container {
+    text-align: center;
+    padding: 40px;
+}
+#btn-container #btn{
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 4px 16px ;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline:none;
+    cursor: pointer;
+    background-color: rgb(172, 170, 227);
+}
+
+#btn-container #btn:hover{
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    cursor: pointer;
+}
