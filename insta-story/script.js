@@ -23,6 +23,7 @@ arr.forEach(function (elem, idx) {
 
 });
 
+
 let fullScreen = document.querySelector('#full-screen');
 
 
