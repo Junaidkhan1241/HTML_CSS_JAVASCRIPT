@@ -9,6 +9,7 @@ function add() {
     li.textContent = value;
 
     //   document.getElementById("result").innerText=value;
+    
     document.getElementById("result").appendChild(li);
 
 }
