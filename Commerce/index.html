@@ -5,106 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E Commerce Store </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        header {
-            background-color: yellow;
-            color: white;
-            padding: 10px;
-            width: 100%;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid red;
-        }
-        .logo{
-            border: 1px solid blue;
-            width: 20%;
-
-        }
-
-        nav {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            width: 80%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            box-sizing: border-box;
-            border: 1px solid red;
-            margin-left: 40px;
-            overflow: hidden;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            padding: 10px;
-            margin: 10px auto;
-            border: 1px solid white;
-            box-sizing: border-box;
-        }
-        
-        nav ul li {
-            margin-left:25px;
-            border: 1px solid green;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 16px;
-            font-weight: 600;
-        }
-
-        /* Slider */
-        .slider {
-  width: 100%;
-  height: 510px;
-  position: relative;
-}
-
-.slider img {
-  width: 100%;
-  height: 500px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
-
-.slider img:first-child {
-  z-index: 1;
-}
-
-.slider img:nth-child(2) {
-  z-index: 0;
-}
-
-.navigation-button {
-  text-align: center;
-  position: relative;
-}
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.active,
-.dot:hover {
-  background-color: #717171;
-}
         </style>
 </head>
 
@@ -149,47 +52,7 @@
           <span class="dot" onclick="changeSlide(4)"></span>
         </div>
       </div>
-      <script>
-        var imgs = document.querySelectorAll('.slider img');
-var dots = document.querySelectorAll('.dot');
-var currentImg = 0; // index of the first image 
-const interval = 5000; // duration(speed) of the slide
-
-function changeSlide(index) {
-  for (let i = 0; i < imgs.length; i++) {
-    imgs[i].style.opacity = 0;
-    dots[i].classList.remove('active');
-  }
-  imgs[index].style.opacity = 1;
-  dots[index].classList.add('active');
-  currentImg = index;
-}
-
-function nextSlide() {
-  currentImg++;
-  if (currentImg >= imgs.length) {
-    currentImg = 0;
-  }
-  changeSlide(currentImg);
-}
-
-function prevSlide() {
-  currentImg--;
-  if (currentImg < 0) {
-    currentImg = imgs.length - 1;
-  }
-  changeSlide(currentImg);
-}
-
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    changeSlide(index);
-  });
-});
-
-setInterval(() => {  nextSlide();
-}, interval);
-      </script>
+      <script src="script.js"></script>
 </body>
 
 </html>
