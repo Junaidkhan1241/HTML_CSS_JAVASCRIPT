@@ -10,11 +10,23 @@
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <style>
+      span{
+        display: none;
+      }
+      @media screen and (max-width:602px) {
+        nav{
+          display: none;
+        }
+        span{
+          display: block;
+        }
+        
+      }
         </style>
 </head>
 
 <body>
-    <header>
+    <header class="navbar navbar-expand-sm navbar-expand-md  navbar-expand-lg">
         <div class="logo">
             <a href="#"><img src="" alt="">Logo</a>
         </div>
@@ -27,23 +39,24 @@
                 <li><a href="#">Contact us</a></li>
             </ul>
         </nav>
+        <span>Icon</span>
     </header>
     <div id="carouselExample" class="carousel slide">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="Pictures/4.jpg" class="d-block w-100" alt="...">
+          <img src="Pictures/4.jpg" class="d-block w-100  " alt="..." style="height: 400px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-          <img src="Pictures/3.jpg" class="d-block w-100" alt="...">
+          <img src="Pictures/3.jpg" class="d-block w-100 " alt="..." style="height: 400px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-          <img src="Pictures/2.jpg" class="d-block w-100" alt="...">
+          <img src="Pictures/2.jpg" class="d-block w-100 " alt="..." style="height: 400px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-          <img src="Pictures/1.jpg" class="d-block w-100" alt="...">
+          <img src="Pictures/1.jpg" class="d-block w-100 " alt="..." style="height: 400px; object-fit: cover;">
         </div>
         <div class="carousel-item">
-          <img src="Pictures/5.jpg" class="d-block w-100" alt="...">
+          <img src="Pictures/5.jpg" class="d-block w-100 " alt="..." style="height: 400px; object-fit: cover;">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -56,33 +69,17 @@
       </button>
     </div>
 
-    <!-- Slider -->
-    <!-- <div class="slider">
-        <div class="slide">
-          <img src="Pictures/4.jpg" alt="Image 1" style="height: 400px;" >
-        </div>
-        <div class="slide">
-          <img src="Pictures/3.jpg" alt="Image 2" style="height: 400px;">
-        </div>
-        <div class="slide">
-          <img src="Pictures/5.jpg" alt="Image 3" style="height: 400px;">
-        </div>
-        <div class="slide">
-          <img src="Pictures/2.jpg" alt="Image 4" style="height: 400px;">
-        </div>
-        <div class="slide">
-          <img src="Pictures/1.jpg" alt="Image 5" style="height: 400px;">
-        </div>
-        <div class="navigation-button">
-          <span class="dot active" onclick="changeSlide(0)"></span>
-          <span class="dot" onclick="changeSlide(1)"></span>
-          <span class="dot" onclick="changeSlide(2)"></span>
-          <span class="dot" onclick="changeSlide(3)"></span>
-          <span class="dot" onclick="changeSlide(4)"></span>
-        </div>
-      </div> -->
-      <script src="script.js"></script>
-      <script></script>
+   <script src="script.js"></script>
+      <script>
+        let burger = document.querySelector("span");
+        let nav = document.querySelector("nav");
+        burger.addEventListener("click",function(){
+          nav.style.display="block";
+          let nav = document.querySelector("nav");
+          nav.classList.toggle("active");
+          burger.classList.toggle("active");
+        })
+      </script>
 </body>
 
 </html>
