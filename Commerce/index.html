@@ -75,6 +75,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  object-fit: cover;
 }
 
 .slider img:first-child {
@@ -126,19 +127,19 @@
     <!-- Slider -->
     <div class="slider">
         <div class="slide">
-          <img src="../image-slider/image-3.jpg" alt="Image 1">
+          <img src="Pictures/4.jpg" alt="Image 1" style="height: 400px;" >
         </div>
         <div class="slide">
-          <img src="img2.jpg" alt="Image 2">
+          <img src="Pictures/3.jpg" alt="Image 2" style="height: 400px;">
         </div>
         <div class="slide">
-          <img src="img3.jpg" alt="Image 3">
+          <img src="Pictures/5.jpg" alt="Image 3" style="height: 400px;">
         </div>
         <div class="slide">
-          <img src="img4.jpg" alt="Image 4">
+          <img src="Pictures/2.jpg" alt="Image 4" style="height: 400px;">
         </div>
         <div class="slide">
-          <img src="img5.jpg" alt="Image 5">
+          <img src="Pictures/1.jpg" alt="Image 5" style="height: 400px;">
         </div>
         <div class="navigation-button">
           <span class="dot active" onclick="changeSlide(0)"></span>
@@ -152,7 +153,7 @@
         var imgs = document.querySelectorAll('.slider img');
 var dots = document.querySelectorAll('.dot');
 var currentImg = 0; // index of the first image 
-const interval = 3000; // duration(speed) of the slide
+const interval = 5000; // duration(speed) of the slide
 
 function changeSlide(index) {
   for (let i = 0; i < imgs.length; i++) {
@@ -186,8 +187,7 @@ dots.forEach((dot, index) => {
   });
 });
 
-setInterval(() => {
-  nextSlide();
+setInterval(() => {  nextSlide();
 }, interval);
       </script>
 </body>
