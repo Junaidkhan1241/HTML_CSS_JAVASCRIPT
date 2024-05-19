@@ -13,52 +13,47 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <style>
-    .section-1{
-      border: 1px solid black;
-      width: 100%;
-      height: 480px;
-      padding: 10px 20px;
-      box-sizing: border-box;
-    }
-    .categories{
-      border: 1px solid red;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      /* align-items: center; */
-      padding: 0px 10px;
-     margin: 10px auto;
-    }
-    span {
-      display: none;
-    }
-
-    @media screen and (max-width:602px) {
-      nav {
-        display: none;
-      }
-
-      span {
-        display: block;
-      }
-      .section-1{
-        height: 100vh;
-        padding: 10px 20px;
-        box-sizing: border-box;
-        overflow: scroll;
-      }
-      .categories{
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-    }
+  
   </style>
 </head>
 
 <body>
-  <header class="navbar navbar-expand-sm navbar-expand-md  navbar-expand-lg">
+  <div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">E Commerce</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+              aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Cart</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link " href="#" role="button" aria-expanded="false">shop</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link " href="#" role="button" aria-expanded="false">About us</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link " href="#" role="button" aria-expanded="false">Contact us</a>
+                  </li>
+              </ul>
+              <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+          </div>
+      </div>
+  </nav>
+
+  </div>
+  <!-- <header class="navbar navbar-expand-sm navbar-expand-md  navbar-expand-lg">
     <div class="logo">
       <a href="#"><img src="" alt="">Logo</a>
     </div>
@@ -76,7 +71,7 @@
       </div>
     </nav>
     <span>Icon</span>
-  </header>
+  </header> -->
 
   <!-- Main -->
   <main>
